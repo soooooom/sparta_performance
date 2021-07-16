@@ -1,0 +1,22 @@
+extends ./main.pug
+include mixins/prfmBlock
+  // Main
+block contents
+        .inner
+            .tiles
+                each item in prfms
+                    +prfmBlock({
+                            svcNm : item.svcNm,
+                            svcTime : item.svcTime,
+                            payatNm : item.payatNm, 
+                            imgUrl : item.imgUrl,
+                            id : item.id
+                        })
+        footer#footer
+            p &copy; All rights reserved
+        // Scripts
+        script(src='./static/js/jquery.min.js')
+        script(src='./static/js/browser.min.js')
+        script(src='./static/js/breakpoints.min.js')
+        script(src='./static/js/util.js')
+        script(src='./static/js/main.js')

@@ -1,0 +1,10 @@
+mixin prfmBlock(prfm = {})
+        .prfmBlock
+            article.style3
+                span.image
+                    img(src=prfm.imgUrl alt='')
+                a(href= routes.info(prfm.id))
+                    h2=prfm.svcNm
+                    .content
+                        p=prfm.svcTime
+                        p=prfm.payatNm

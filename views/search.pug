@@ -1,0 +1,17 @@
+extends ./main.pug
+include mixins/prfmBlock
+
+block contents
+    .search__header
+        p  "#{searchingFor}" 이/가 포함된 검색 결과입니다.
+    .search__videos
+        if prfms.length ===0
+            h5 찾는 공연/전시가 없습니다.
+        each item in prfms
+            +prfmBlock({
+                svcNm : item.svcNm,
+                svcTime : item.svcTime, 
+                payatNm : item.payatNm, 
+                imgUrl : item.imgUrl,
+                id : item.id
+            })

@@ -1,0 +1,16 @@
+extends ./main.pug
+block contents
+    .prfm-detail__container
+        .prfm__img
+            img.prfm__thumbnail(src=prfm.imgUrl)
+        .prfm__info
+            .prfm_btn
+                a(href=`${prfm.svcURL}`)
+                    button 예약하기
+            h3.prfm__svcNm=prfm.svcNm
+            p.prfm__svcstatNm=prfm.svcTime
+            p.prfm__payatNm=prfm.payatNm
+            p.prfm__maxclassNm=prfm.maxclassNm
+            p.prfm__usetgtInfo=prfm.usetgtInfo
+            p.prfm__telNo=prfm.telNo
+            p.prfm__areaNm=prfm.areaNm
